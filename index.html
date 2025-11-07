@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Style Widget System</title>
+
+    <!-- GridStack CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@10.1.2/dist/gridstack.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with controls -->
+        <div class="header">
+            <h1>Android Widget System</h1>
+            <div class="controls">
+                <button id="addWidget" class="btn btn-primary">+ Add Widget</button>
+                <button id="saveLayout" class="btn btn-success">Save Layout</button>
+                <button id="clearLayout" class="btn btn-danger">Clear All</button>
+                <label class="toggle">
+                    <input type="checkbox" id="editMode" checked>
+                    <span>Edit Mode</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Widget Templates Panel -->
+        <div class="widget-templates">
+            <h3>Widget Templates</h3>
+            <div class="template-grid">
+                <div class="template-item" data-widget-type="clock">
+                    <div class="template-preview">🕐</div>
+                    <span>Clock</span>
+                </div>
+                <div class="template-item" data-widget-type="weather">
+                    <div class="template-preview">🌤️</div>
+                    <span>Weather</span>
+                </div>
+                <div class="template-item" data-widget-type="calendar">
+                    <div class="template-preview">📅</div>
+                    <span>Calendar</span>
+                </div>
+                <div class="template-item" data-widget-type="music">
+                    <div class="template-preview">🎵</div>
+                    <span>Music</span>
+                </div>
+                <div class="template-item" data-widget-type="photo">
+                    <div class="template-preview">🖼️</div>
+                    <span>Photo</span>
+                </div>
+                <div class="template-item" data-widget-type="notes">
+                    <div class="template-preview">📝</div>
+                    <span>Notes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Grid Container -->
+        <div class="phone-screen">
+            <div class="grid-stack" id="grid-stack">
+                <!-- Widgets will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span id="widgetCount">Widgets: 0</span>
+            <span id="layoutStatus">Layout: Default</span>
+        </div>
+    </div>
+
+    <!-- GridStack JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gridstack@10.1.2/dist/gridstack-all.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
