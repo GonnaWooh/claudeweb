@@ -41,7 +41,6 @@ class WidgetSystem {
 
         this.setupEventListeners();
         this.loadLayout();
-        this.updateStatus();
 
         // Start clocks if any
         this.startClocks();
@@ -68,19 +67,6 @@ class WidgetSystem {
         // Edit Mode Toggle
         document.getElementById('editMode').addEventListener('change', (e) => {
             this.toggleEditMode(e.target.checked);
-        });
-
-        // Template Item Clicks
-        document.querySelectorAll('.template-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const widgetType = item.dataset.widgetType;
-                this.addWidget(widgetType);
-            });
-        });
-
-        // Grid events
-        this.grid.on('added removed change', () => {
-            this.updateStatus();
         });
     }
 
@@ -238,14 +224,8 @@ class WidgetSystem {
     saveLayout() {
         const serializedData = this.grid.save();
         localStorage.setItem('androidWidgetLayout', JSON.stringify(serializedData));
-
-        // Update status
-        document.getElementById('layoutStatus').textContent = 'Layout: Saved ✓';
-        setTimeout(() => {
-            document.getElementById('layoutStatus').textContent = 'Layout: Default';
-        }, 2000);
-
         console.log('Layout saved:', serializedData);
+        alert('Layout saved successfully!');
     }
 
     loadLayout() {
@@ -309,11 +289,6 @@ class WidgetSystem {
             this.grid.disable();
             document.querySelector('.grid-stack').classList.add('static');
         }
-    }
-
-    updateStatus() {
-        const widgetCount = this.grid.getGridItems().length;
-        document.getElementById('widgetCount').textContent = `Widgets: ${widgetCount}`;
     }
 
     // Clock functionality
