@@ -19,12 +19,20 @@ A beautiful and interactive widget system inspired by Android OS, built with Gri
 - **Edit Mode**: Toggle between edit and view modes
 - **Responsive Design**: Works on different screen sizes
 
+## Live Demo
+
+🚀 **[View Live Demo](https://gonnawoh.github.io/claudeweb/)**
+
+The application is automatically deployed to GitHub Pages via GitHub Actions whenever changes are pushed.
+
 ## Technologies Used
 
 - **GridStack.js** - Powerful grid layout library
 - **Vanilla JavaScript** - No framework dependencies
 - **CSS3** - Modern styling with gradients and animations
 - **LocalStorage API** - For persistent widget layouts
+- **GitHub Pages** - Free static site hosting
+- **GitHub Actions** - Automated deployment
 
 ## GridStack.js Configuration
 
@@ -150,6 +158,29 @@ Edit `style.css` to customize:
 - Edge
 
 Requires ES6+ support.
+
+## Deployment
+
+### GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+**Setup Instructions:**
+
+1. Go to your GitHub repository settings
+2. Navigate to **Settings** > **Pages**
+3. Under "Build and deployment", set:
+   - **Source**: GitHub Actions
+4. The workflow will automatically deploy on every push to the main branch
+
+The site will be available at: `https://<username>.github.io/<repository-name>/`
+
+### Manual Deployment
+
+You can also deploy manually by:
+1. Uploading the files to any static hosting service
+2. No build process required - it's pure HTML/CSS/JS
+3. Works on Netlify, Vercel, Cloudflare Pages, etc.
 
 ## License
 
