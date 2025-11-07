@@ -143,7 +143,7 @@ body {
 .phone-screen {
     background: #1f2937;
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: 45px 20px 30px 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     max-width: 450px;
     margin: 0 auto;
@@ -153,7 +153,7 @@ body {
 .phone-screen::before {
     content: '';
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -442,7 +442,7 @@ body {
 
     .phone-screen {
         max-width: 100%;
-        padding: 20px 10px;
+        padding: 35px 10px 20px 10px;
     }
 
     .template-grid {
